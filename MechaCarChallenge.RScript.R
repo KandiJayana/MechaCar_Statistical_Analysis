@@ -29,11 +29,11 @@ summarize_demo <- suspension %>% summarize(Mean=mean(PSI),Median=(PSI),Variance=
 lot_demo <- suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=(PSI),Variance=var(PSI),SD=sd(PSI))
 
 #PSI Whole lot
-plt1 <- ggplot(mecha_coil,aes(y=PSI)) #import dataset into ggplot2
-plt1 + geom_boxplot() #add boxplot
+plt1 <- ggplot(mecha_coil,aes(y=PSI)) 
+plt1 + geom_boxplot() 
 
 #PSI each individual Lot
-plt2 <- ggplot(mecha_coil,aes(x=Manufacturing_Lot,y=PSI)) #import dataset into ggplot2
+plt2 <- ggplot(mecha_coil,aes(x=Manufacturing_Lot,y=PSI)) 
 plt2 + geom_boxplot()
 
 
